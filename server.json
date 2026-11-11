@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ofylypczuk/bourse",
+  "title": "Bourse",
+  "description": "Congress, Trump and Cabinet stock trades, SEC insiders, 13F funds and lobbying data as tools.",
+  "version": "1.0.0",
+  "websiteUrl": "https://www.bourse.pl/api/",
+  "repository": {
+    "url": "https://github.com/ofylypczuk/bourse-sdk",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.bourse.pl/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer bk_... (free key in the Bourse app: Settings -> API key)",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

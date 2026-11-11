@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bourse-sdk"
+version = "1.3.0"
+description = "Python client for the Bourse API: Congress, Trump and Cabinet trades, SEC insiders, 13F funds, lobbying, contracts, layoffs and more."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Bourse", email = "contact@bourse.pl" }]
+keywords = ["congress trading", "insider trading", "stock act", "sec form 4", "13f", "lobbying", "finance api", "alternative data"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Financial and Insurance Industry",
+  "Topic :: Office/Business :: Financial :: Investment",
+]
+dependencies = ["requests>=2.25"]
+
+[project.optional-dependencies]
+pandas = ["pandas>=1.3"]
+
+[project.urls]
+Homepage = "https://www.bourse.pl/api/"
+Documentation = "https://www.bourse.pl/api/"
+"OpenAPI spec" = "https://api.bourse.pl/v1/openapi.json"
+Repository = "https://github.com/ofylypczuk/bourse-sdk"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+bourse = ["py.typed"]
